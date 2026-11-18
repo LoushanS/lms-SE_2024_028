@@ -1,10 +1,10 @@
  package lms;
 
-import lms.model.Book;
-import lms.model.DVD;
-import lms.model.Student;
-import lms.model.Staff;
-import lms.service.Library;
+import lms.Model.Book;
+import lms.Model.DVD;
+import lms.Model.Student;
+import lms.Model.Staff;
+import lms.Service.Library;
 
 public class Main {
 
@@ -33,6 +33,7 @@ public class Main {
 
         library.streamIfPossible(d1);
         library.streamIfPossible(b1);
+
     }
 }
 

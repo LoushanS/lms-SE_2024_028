@@ -1,9 +1,10 @@
-package lms.service;
 
-import lms.model.Book;
-import lms.model.DVD;
-import lms.model.LibraryItem;
-import lms.model.Member;
+package lms.Service;
+
+import lms.Model.Book;
+import lms.Model.DVD;
+import lms.Model.LibraryItem;
+import lms.Model.Member;
 
 import java.util.ArrayList;
 import java.util.List;
