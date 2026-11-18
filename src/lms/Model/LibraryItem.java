@@ -1,3 +1,4 @@
+
 package lms.Model;
 
 public class LibraryItem {
@@ -54,4 +55,3 @@ public class LibraryItem {
                 "', borrowed=" + isBorrowed + "}";
     }
 }
-

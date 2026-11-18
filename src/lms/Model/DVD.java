@@ -1,5 +1,5 @@
-package lms.Model;
 
+package lms.Model;
 
 public class DVD extends LibraryItem {
 
@@ -19,4 +19,3 @@ public class DVD extends LibraryItem {
         return daysLate * 25.0;
     }
 }
-

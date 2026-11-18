@@ -1,15 +1,17 @@
 
-package lms.model;
+package lms.Model;
 
 public class Member {
 
     private String memberId;
     private String name;
     private int borrowedCount;
+    private int maxBorrowLimit;
 
-    public Member(String memberId, String name) {
+    public Member(String memberId, String name, int maxBorrowLimit) {
         setMemberId(memberId);
         setName(name);
+        setMaxBorrowLimit(maxBorrowLimit);
         this.borrowedCount = 0;
     }
 
@@ -23,6 +25,10 @@ public class Member {
 
     public int getBorrowedCount() {
         return borrowedCount;
+    }
+
+    public int getMaxBorrowLimit() {
+        return maxBorrowLimit;
     }
 
     public void setMemberId(String memberId) {
@@ -46,15 +52,23 @@ public class Member {
         this.borrowedCount = borrowedCount;
     }
 
+    public void setMaxBorrowLimit(int maxBorrowLimit) {
+        if (maxBorrowLimit < 0) {
+            throw new IllegalArgumentException("Borrow limit cannot be negative");
+        }
+        this.maxBorrowLimit = maxBorrowLimit;
+    }
+
     public void incrementBorrowedCount() {
         setBorrowedCount(this.borrowedCount + 1);
     }
 
     @Override
     public String toString() {
-        return "Member{id='" + memberId +
+        return getClass().getSimpleName() +
+                "{id='" + memberId +
                 "', name='" + name +
-                "', borrowedCount=" + borrowedCount + "}";
+                "', borrowedCount=" + borrowedCount +
+                ", maxBorrowLimit=" + maxBorrowLimit + "}";
     }
 }
-
