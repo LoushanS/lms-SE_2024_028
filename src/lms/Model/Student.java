@@ -1,4 +1,6 @@
-package lms.model;
+package lms.Model;
+
+import lms.Model.Member;
 
 public class Student extends Member {
 

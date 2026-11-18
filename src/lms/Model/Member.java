@@ -1,4 +1,4 @@
-package lms.model;
+package lms.Model;
 
 public class Member {
 

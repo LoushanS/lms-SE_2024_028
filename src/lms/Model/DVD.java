@@ -1,4 +1,5 @@
-package lms.model;
+package lms.Model;
+
 
 public class DVD extends LibraryItem {
 

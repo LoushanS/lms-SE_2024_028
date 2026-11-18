@@ -1,9 +1,9 @@
-package lms.service;
+package lms.Service;
 
-import lms.model.Book;
-import lms.model.DVD;
-import lms.model.LibraryItem;
-import lms.model.Member;
+import lms.Model.DVD;
+import lms.Model.LibraryItem;
+import lms.Model.Member;
+import lms.Model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class Library {
 
     public void addItem(Book book) {
         items.add(book);
-        System.out.println("Added via addItem(Book): " + book.getTitle());
+        System.out.println("Added via addItem(Book): " + book);
     }
 
     public void addItem(DVD dvd) {
