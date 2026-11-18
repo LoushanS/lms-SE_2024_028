@@ -1,8 +1,8 @@
 
-package lms.service;
+package lms.Service;
 
-import lms.model.Book;
-import lms.model.Member;
+import lms.Model.Book;
+import lms.Model.Member;
 import java.util.ArrayList;
 import java.util.List;
 

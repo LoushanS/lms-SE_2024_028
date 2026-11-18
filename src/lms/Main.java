@@ -1,9 +1,9 @@
 
 package lms;
 
-import lms.model.Book;
-import lms.model.Member;
-import lms.service.Library;
+import lms.Model.Book;
+import lms.Model.Member;
+import lms.Service.Library;
 
 public class Main {
 
