@@ -1,3 +1,4 @@
+
 package lms.Model;
 
 public class Book extends LibraryItem {
@@ -20,5 +21,3 @@ public class Book extends LibraryItem {
         this.author = author;
     }
 }
-
-

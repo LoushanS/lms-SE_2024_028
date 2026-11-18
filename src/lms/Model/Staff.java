@@ -1,6 +1,5 @@
 package lms.Model;
 
-import lms.Model.Member;
 
 public class Staff extends Member {
 

@@ -1,3 +1,4 @@
+
 package lms.Model;
 
 public class Member {
@@ -71,4 +72,3 @@ public class Member {
                 ", maxBorrowLimit=" + maxBorrowLimit + "}";
     }
 }
-
