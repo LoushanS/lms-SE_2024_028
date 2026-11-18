@@ -9,7 +9,7 @@ import java.util.List;
 public class Library {
 
     private final List<LibraryItem> items = new ArrayList<>();
-    private final List<Member> members = new ArrayList<>();
+    private final List<Member>  members = new ArrayList<>();
 
     public void addItem(LibraryItem item) {
         items.add(item);
@@ -50,7 +50,8 @@ public class Library {
         System.out.println("--- Late fees if " + daysLate + " day(s) late ---");
 
         for (LibraryItem item : items) {
-            System.out.println(item.getTitle() + ": " + item.calculateLateFee(daysLate));
+            System.out.println(item.getTitle() + ": " +
+                    item.calculateLateFee(daysLate));
         }
     }
 
