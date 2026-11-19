@@ -9,7 +9,7 @@ import java.util.List;
 public class Library {
 
     private final List<LibraryItem> items = new ArrayList<>();
-    private final List<Member> members = new ArrayList<>();
+    private final List<Member>  members = new ArrayList<>();
 
     public void addItem(LibraryItem item) {
         items.add(item);

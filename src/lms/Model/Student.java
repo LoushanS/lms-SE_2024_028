@@ -1,5 +1,5 @@
-package lms.Model;
 
+package lms.Model;
 
 public class Student extends Member {
 
@@ -9,4 +9,3 @@ public class Student extends Member {
         super(memberId, name, BORROW_LIMIT);
     }
 }
-
