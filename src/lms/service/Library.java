@@ -1,18 +1,15 @@
 
 package lms.Service;
 
-import lms.Model.Book;
-import lms.Model.DVD;
-import lms.Model.LibraryItem;
-import lms.Model.Member;
-
+import lms.Model.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Library {
 
     private final List<LibraryItem> items = new ArrayList<>();
-    private final List<Member>  members = new ArrayList<>();
+    private final List<Member> members = new ArrayList<>();
 
     public void addItem(LibraryItem item) {
         items.add(item);
@@ -65,6 +62,31 @@ public class Library {
         } else {
             System.out.println(item.getTitle() +
                     " cannot be streamed - it isn't a DVD.");
+        }
+    }
+
+    public void lend(Loanable thing, Member member) {
+        thing.loan(member);
+    }
+
+    public void reserveIfPossible(LibraryItem item, Member member) {
+        if (item instanceof Reservable reservable) {
+            reservable.reserve(member);
+        } else {
+            System.out.println(item.getTitle() + " cannot be reserved.");
+        }
+    }
+
+    public void printMembersByActivity() {
+        List<Member> sortedMembers = new ArrayList<>(members);
+
+        Collections.sort(sortedMembers);
+
+        System.out.println("--- Members ranked by activity ---");
+
+        for (Member member : sortedMembers) {
+            System.out.println(member.getName() + " (" +
+                    member.getBorrowedCount() + " borrowed)");
         }
     }
 
